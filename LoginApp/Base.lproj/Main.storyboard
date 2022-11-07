@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,6 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYS-YL-V3z"/>
-                                    <segue destination="0Pu-fo-hlz" kind="presentation" identifier="1" modalPresentationStyle="fullScreen" id="pUs-uv-Kau"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,6 +78,7 @@
                     <connections>
                         <outlet property="passwordTF" destination="fz0-Ao-LHu" id="sT3-DC-gu7"/>
                         <outlet property="userNameTF" destination="2Z7-0y-XL6" id="bHD-Hk-qhj"/>
+                        <segue destination="0Pu-fo-hlz" kind="presentation" identifier="goToWelcomeSegue" modalPresentationStyle="fullScreen" id="Tbn-V0-6ad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,7 +110,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutButtonTapped" destination="0Pu-fo-hlz" eventType="touchUpInside" id="3Eo-ki-0SA"/>
                                     <segue destination="RF4-dz-pGW" kind="unwind" unwindAction="unwindFor:" id="gGx-yM-sDQ"/>
                                 </connections>
                             </button>

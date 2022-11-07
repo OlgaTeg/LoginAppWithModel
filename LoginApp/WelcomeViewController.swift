@@ -16,13 +16,8 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let userName = self.userName else { return }
-        welcomeLabel.text = "Welcome \(userName)!"
+        welcomeLabel.text = "Welcome \(userName ?? "")!"
         setGradientLayer()
-    }
-    
-    @IBAction func logoutButtonTapped() {
-        dismiss(animated: true)
     }
     
     private func setGradientLayer() {
