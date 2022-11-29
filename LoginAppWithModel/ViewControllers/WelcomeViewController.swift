@@ -9,16 +9,21 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    var userName: String?
-
+    var user: User!
+    
+    //MARK: - IBOutlets
     @IBOutlet var welcomeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.text = "Welcome \(userName ?? "")!"
+        welcomeLabel.text = "Welcome, \(user.person.firstName) \(user.person.lastName)!"
         setGradientLayer()
     }
+}
+
+//MARK: - Private func
+extension WelcomeViewController {
     
     private func setGradientLayer() {
         let gradientLayer = CAGradientLayer()
